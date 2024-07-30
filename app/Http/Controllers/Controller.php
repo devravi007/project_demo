@@ -19,11 +19,13 @@ class Controller extends BaseController
         $content = $pdf->getText();
         $details = $pdf->getDetails();
 
+
+
         // extract text of a limited amount of pages. here, it will only use the first two pages. 
         $text = $pdf->getText(2);
 
         // extract the text of a specific page (in this case the first page) 
-        $text = $pdf->getPages()[0]->getText();
+        // $text = $pdf->getPages()[0]->getText();
 
         $lines = explode("\n", $content);
         foreach ($lines as $line) {
